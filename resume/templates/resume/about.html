@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}ARRY | ABOUT{% endblock title %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock css %}
+
+
+{% block body %}
+
+
+<div class="container mt-4">
+  <h1 style="color: rgb(127,125,125);">About Me</h1>
+  <div class="rounded-5" style="height: 5px; width:88px; background: rgb(241,73,73);"></div>
+  <div class="rounded-5 mt-2" style="height: 5px; width:50px; background: rgb(241,73,73);"></div>
+  <div class="rounded-5 mt-2" style="height: 5px; width:25px; background: rgb(241,73,73);"></div>
+</div>
+
+<div class="container mt-5">
+  <p style="text-align:justify; color: rgb(127,125,125); font-size: 1.3rem;"><span
+      style="font-size: 3rem; color:rgb(241,73,73);">A</span>rif is here. I am a skilled web developer with expertise
+    in backend development using <span style="color: rgb(241,73,73);">Django in Python</span>. I have honed my skills as
+    a Python programmer, excelling in
+    writing clean and efficient code to create robust applications. My ability to learn quickly have helped me stay
+    up-to-date with the latest technologies, frameworks and programming languages, allowing me to continuously improve
+    my skills and deliver exceptional solutions.</p><br>
+  <p style="text-align:justify; color: rgb(127,125,125); font-size: 1.3rem;">My mastery of Django in Python has enabled
+    me to <span style="color: rgb(241,73,73);">build
+      complex, scalable and secure web applications</span>, and my passion for programming have kept me motivated to
+    create
+    innovative solutions that meet and exceed client expectations.</p>
+</div>
+
+{% comment %} <div class="container mt-4">
+  <div class="row p-1">
+    <div class="d-flex justify-content-start">
+      <h3 style="width: 40%; color:rgb(127,125,125)"><span style="color: rgb(241,73,73);"><i class="fa fa-graduation-cap" aria-hidden="true"></i>
+      </span> Education</h3>
+    </div>
+    <div class="col-md-6 ">
+    </div>
+  </div>
+</div> {% endcomment %}
+
+{% endblock body %}

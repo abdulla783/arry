@@ -1,0 +1,136 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}ARRY | SERVICES{% endblock title %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/service.css' %}">
+
+<style>
+  .btn {
+    color: rgb(241, 73, 73);
+    font-size: 1.3rem;
+    border: 1px solid rgb(241, 73, 73);
+    color: rgb(241, 73, 73)
+  }
+
+  .btn:hover {
+    color: whitesmoke;
+    background-color: rgb(127, 125, 125);
+  }
+
+  .cards:hover {
+    animation: animate .5s ease-in-out;
+  }
+
+  @keyframes animate {
+    100% {
+      opacity: 1;
+      box-shadow: 3px 5px rgb(192, 190, 190);
+    }
+
+    75% {
+      opacity: .75;
+      box-shadow: 3px 5px rgb(192, 190, 190);
+    }
+
+    50% {
+      opacity: .5;
+      box-shadow: 3px 5px rgb(192, 190, 190);
+    }
+
+    25% {
+      opacity: .25;
+      box-shadow: 3px 5px rgb(192, 190, 190);
+    }
+
+    0% {
+      opacity: 0;
+      box-shadow: none;
+    }
+  }
+</style>
+
+{% endblock css %}
+
+
+{% block body %}
+
+<div class="container mt-4">
+  <h1 style="color: rgb(127,125,125);">Services</h1>
+  <div class="rounded-5" style="height: 5px; width:88px; background: rgb(241,73,73);"></div>
+  <div class="rounded-5 mt-2" style="height: 5px; width:50px; background: rgb(241,73,73);"></div>
+  <div class="rounded-5 mt-2" style="height: 5px; width:25px; background: rgb(241,73,73);"></div>
+</div>
+
+<div class="container mt-2 p-5">
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+    <!-- Web Development -->
+    <div class="container col-md-4 p-4">
+      <div class="card p-4 rounded-3 d-flex justify-content-center cards">
+        <div class="icon text-center">
+          <ion-icon name="hardware-chip-outline"
+            style="color:rgb(241,73,73);  font-size: 3.5rem; font-family:Aharoni; font-weight:bolder;"></ion-icon>
+        </div>
+        <div class="text-center mt-2">
+          <h3><a href="{% url 'service' %}" style="color: rgb(127,125,125);"
+              class="stretched-link text-decoration-none ">Web Development</a></h3>
+        </div>
+        <div class="text text-center mt-2">
+          <p style="color: rgb(127,125,125); font-size:1.15rem; text-align:justify;">Hey, I am an experienced web
+            developer with skills in
+            front-end and back-end development using various web technologies. In which core technologies is Django with
+            Python, Bootstrap, NodeJS, ReactJS, UI/UX. </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Front-End -->
+    <div class="container col-md-4 p-4 view">
+      <div class="card p-4 rounded-3 d-flex justify-content-center cards">
+        <div class="icon text-center">
+          <ion-icon name="construct-outline"
+            style="color:rgb(241,73,73);  font-size: 3.5rem; font-family:Aharoni; font-weight:bolder;"></ion-icon>
+        </div>
+        <div class="text-center mt-2">
+          <h3><a href="{% url 'service' %}" style="color: rgb(127,125,125);"
+              class="stretched-link text-decoration-none ">Front-End Development</a></h3>
+        </div>
+        <div class="text text-center mt-2">
+          <p style="color: rgb(127,125,125); font-size:1.15rem; text-align:justify;">I am proficient in front-end web
+            development with skills
+            in HTML, CSS, JavaScript, NodeJs, ReactJs and UI/UX, creating responsive and interactive web interfaces.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Back-End -->
+    <div class="container col-md-4 p-4 view">
+      <div class="card p-4 rounded-3 d-flex justify-content-center cards">
+        <div class="icon text-center">
+          <ion-icon name="hardware-chip-outline"
+            style="color:rgb(241,73,73);  font-size: 3.5rem; font-family:Aharoni; font-weight:bolder;"></ion-icon>
+        </div>
+        <div class="text-center mt-2">
+          <h3><a href="{% url 'service' %}" style="color: rgb(127,125,125);"
+              class="stretched-link text-decoration-none ">Back-End Development</a></h3>
+        </div>
+        <div class="text text-center mt-2">
+          <p style="color: rgb(127,125,125); font-size:1.15rem; text-align:justify;">I am a skilled back-end web
+            developer with expertise in
+            Python and Django, designing and implementing robust, secure, and scalable web applications that meet client
+            requirements.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="view">
+    <a href="{% url 'contact' %}" class="btn rounded-5 mt-4 px-4">Hire Me !</a>
+  </div>
+
+</div>
+
+
+{% endblock body %}

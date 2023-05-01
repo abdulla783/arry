@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}ARRY | TERMS & CONDITIONS !!! {% endblock title %}
+
+{% block body %}
+
+
+<div class="container mt-4">
+    <h1 style="color: rgb(127,125,125);">Terms & Conditions</h1>
+    <div class="rounded-5" style="height: 5px; width:158px; background: rgb(241,73,73);"></div>
+    <div class="rounded-5 mt-2" style="height: 5px; width:80px; background: rgb(241,73,73);"></div>
+    <div class="rounded-5 mt-2" style="height: 5px; width:35px; background: rgb(241,73,73);"></div>
+</div>
+
+<div class="container mt-4">
+    <p id="type" style="color:rgb(127, 125, 125); font-size:1.3rem; text-align:justify;"></p>
+</div>
+
+{% endblock body %}
+
+
+{% block js %}
+
+<script>
+    const text = "Welcome arry@official : I am glad to see you here. Please make sure that you are giving right information by the using we can contact you as soon as possible. Thank You !";
+    const typing = document.getElementById("type");
+
+    // function to simulate typing animation
+    function typeWriter(text, i) {
+        if (i < text.length) {
+            typing.innerHTML += text.charAt(i);
+            setTimeout(() => typeWriter(text, i + 1), Math.random() * 100 + 10); // random delay between characters
+        }
+    }
+    typeWriter(text, 0); // start typing animation
+
+
+</script>
+
+{% endblock js %}
